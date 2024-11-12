@@ -39,7 +39,7 @@ export const Sidebar: React.FC<SidebarProps> = ({isOpen}) => {
                 <li className={styles["sidebar-item"]}>
                     <ul className={styles["sidebar-option"]}>
                         <li className={styles["sidebar-option-item"]}>
-                            Только то, что есть в наличии на складе
+                            Только то, что есть в наличии на складах
                         </li>
                         <li className={styles["sidebar-option-item"]}>
                             <input type="checkbox"/>

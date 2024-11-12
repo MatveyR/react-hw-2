@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Стул",
+    "description": "Удобный стул для дома.",
+    "category": "Мебель",
+    "quantity": 15,
+    "unit": "шт",
+    "image": "https://anata-mebel.ru/image/cache/data/stul/ESF/dc-373/stul-dc373-yellow-supbig-577609-3444-1500x1000.jpg"
+  },
+  {
+    "name": "Молоток",
+    "description": "Прочный молоток для строительства.",
+    "category": "Инструменты",
+    "quantity": 8,
+    "unit": "шт",
+    "image": "https://cdn1.ozone.ru/s3/multimedia-8/6674243480.jpg"
+  },
+  {
+    "name": "Микроволновка",
+    "description": "Компактная микроволновая печь.",
+    "category": "Бытовая техника",
+    "quantity": 5,
+    "unit": "шт",
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+  },
+  {
+    "name": "Микроволновка",
+    "description": "Компактная микроволновая печь.",
+    "category": "Бытовая техника",
+    "quantity": 5,
+    "unit": "шт",
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+  },
+  {
+    "name": "Микроволновка",
+    "description": "Компактная микроволновая печь.",
+    "category": "Бытовая техника",
+    "quantity": 5,
+    "unit": "шт",
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+  },
+  {
+    "name": "Микроволновка",
+    "description": "Компактная микроволновая печь.",
+    "category": "Бытовая техника",
+    "quantity": 5,
+    "unit": "шт",
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+  }
+]
