@@ -1,10 +1,12 @@
 import * as React from "react";
 import {useState} from "react";
 import {NavBar, ProductCard, ProductModal, Sidebar} from "../../components/components";
-import productsData from "../../data/products.json";
 import styles from "./style.module.css";
-import {Product} from "../../data/Product.tsx";
+import {Product} from "../../data/models/Product.tsx";
 import {Box, Pagination} from "@mui/material";
+import {useDispatch, useSelector} from "react-redux";
+import {removeProduct} from "../../data/redux/productSlice.tsx";
+import {RootState} from "@reduxjs/toolkit/query";
 
 export const HomePage: React.FC = () => {
     const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
@@ -30,7 +32,13 @@ export const HomePage: React.FC = () => {
         setFilters(filters)
     };
 
-    const filtratedData = productsData.filter(product => {
+    const { products } = useSelector((state: RootState) => state.products);
+    const dispatch = useDispatch();
+    const handleRemoveProduct = (product_id: string) => {
+        dispatch(removeProduct(product_id));
+    };
+
+    const filtratedData = products.filter((product: { name: string; quantity: number; category: never; }) => {
         return (
             (filters.textMask === '' || product.name.toLowerCase().includes(filters.textMask)) &&
             (!filters.nonZeroQ || product.quantity > 0) &&
@@ -49,7 +57,8 @@ export const HomePage: React.FC = () => {
                     <ProductCard
                         key={index}
                         product={product}
-                        onClick={() => handleProductClick(product)}
+                        onCardClick={() => handleProductClick(product)}
+                        onDeleteClick={() => handleRemoveProduct(product.id)}
                     />
                 ))}
             </Box>

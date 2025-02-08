@@ -26,7 +26,7 @@
 .card-product-img {
     margin-top: 10px !important;
     margin-bottom: 10px !important;
-    max-width: 90% !important;
+    max-width: 65% !important;
 }
 
 .card-props-box {
@@ -35,4 +35,10 @@
 
 .card-prop {
     font-family: sans-serif !important;
+}
+
+.card-delete-button {
+    margin-top: 10px !important;
+    font-family: sans-serif !important;
+    background: crimson !important;
 }

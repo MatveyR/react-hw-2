@@ -1,5 +1,6 @@
 [
   {
+    "id": "0",
     "name": "Стул",
     "description": "Удобный стул для дома.",
     "category": "Мебель",
@@ -8,6 +9,7 @@
     "image": "https://anata-mebel.ru/image/cache/data/stul/ESF/dc-373/stul-dc373-yellow-supbig-577609-3444-1500x1000.jpg"
   },
   {
+    "id": "1",
     "name": "Молоток",
     "description": "Прочный молоток для строительства.",
     "category": "Инструменты",
@@ -16,6 +18,7 @@
     "image": "https://cdn1.ozone.ru/s3/multimedia-8/6674243480.jpg"
   },
   {
+    "id": "2",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -24,6 +27,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "3",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -32,6 +36,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "4",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -40,6 +45,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "5",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -48,6 +54,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "6",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -56,6 +63,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "7",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -64,6 +72,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "8",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -72,6 +81,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "9",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -80,6 +90,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "10",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -88,6 +99,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "11",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -96,6 +108,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "12",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -104,6 +117,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "13",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -112,6 +126,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "14",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -120,6 +135,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "15",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -128,6 +144,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "16",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -136,6 +153,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "17",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -144,6 +162,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "18",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -152,6 +171,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "19",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -160,6 +180,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "20",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -168,6 +189,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "21",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -176,6 +198,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "22",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -184,6 +207,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "23",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -192,6 +216,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "24",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -200,6 +225,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "25",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -208,6 +234,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "26",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -216,6 +243,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "27",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -224,6 +252,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "28",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -232,6 +261,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "29",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -240,6 +270,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "30",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -248,6 +279,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "31",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -256,6 +288,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "32",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -264,6 +297,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "33",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -272,6 +306,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "34",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -280,6 +315,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "35",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -288,6 +324,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "36",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -296,6 +333,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "37",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -304,6 +342,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "38",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -312,6 +351,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "39",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -320,6 +360,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "40",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -328,6 +369,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "41",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -336,6 +378,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "42",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -344,6 +387,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "43",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -352,6 +396,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "44",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -360,6 +405,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "45",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -368,6 +414,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "46",
     "name": "Пасхалка",
     "description": "Вы получили достижение",
     "category": "Бытовая техника",
@@ -376,6 +423,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "47",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -384,6 +432,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "48",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -392,6 +441,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "49",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -400,6 +450,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "50",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -408,6 +459,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "51",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -416,6 +468,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "52",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -424,6 +477,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "53",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -432,6 +486,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "54",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -440,6 +495,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "55",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -448,6 +504,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "56",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -456,6 +513,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "57",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
@@ -464,6 +522,7 @@
     "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
   },
   {
+    "id": "58",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",

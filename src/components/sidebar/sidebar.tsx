@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import styles from "./style.module.css";
 import {
     Box,
@@ -19,20 +19,20 @@ interface SidebarProps {
     onFiltrate: (filter: { textMask: string; category: string; nonZeroQ: boolean }) => void;
 }
 
-export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onFiltrate }) => {
+export const Sidebar: React.FC<SidebarProps> = ({isOpen, onFiltrate}) => {
     const [textMask, setSearchText] = useState("");
     const [category, setCategory] = useState("");
     const [nonZeroQ, setNonZeroQ] = useState(false);
 
     const handleSetFilters = () => {
-        onFiltrate({ textMask, category, nonZeroQ });
+        onFiltrate({textMask, category, nonZeroQ});
     };
 
     const handleResetFilters = () => {
         setSearchText("");
         setCategory("");
         setNonZeroQ(false);
-        onFiltrate({ textMask: "", category: "", nonZeroQ: false });
+        onFiltrate({textMask: "", category: "", nonZeroQ: false});
     };
 
     return (
@@ -61,7 +61,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onFiltrate }) => {
                         <Typography className={styles["sidebar-option-label"]}>Категория</Typography>
                         <FormControl fullWidth variant="outlined" className={styles["sidebar-select-container"]}>
                             <Select
-                                variant="standard"
+                                variant="outlined"
                                 size="small"
                                 className={styles["sidebar-select"]}
                                 value={category || "Любое"}

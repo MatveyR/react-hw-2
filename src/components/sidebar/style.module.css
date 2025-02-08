@@ -36,16 +36,13 @@
     padding-left: 20px !important;
 }
 
-.sidebar-item:not(:last-child) {
-    border-bottom: 1px solid #d0d5dd !important;
-    padding-bottom: 15px !important;
-}
-
 .sidebar-option {
     display: flex !important;
     justify-content: space-between !important;
     align-items: center !important;
     width: 100% !important;
+    border-bottom: 1px solid #d0d5dd !important;
+    padding-bottom: 15px;
 }
 
 .sidebar-option-label {

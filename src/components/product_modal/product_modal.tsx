@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./style.module.css";
-import {Modal, Button, Typography, Box} from '@mui/material';
+import {Box, Button, Modal, Typography} from '@mui/material';
 
 interface ProductModalProps {
     product: {
