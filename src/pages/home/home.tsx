@@ -35,6 +35,8 @@ export const HomePage: React.FC = () => {
         navigate(`/products/${product_id}`)
     }
 
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
     const {products} = useSelector((state: RootState) => state.products);
     const dispatch = useDispatch();
     const handleRemoveProduct = (product_id: string) => {

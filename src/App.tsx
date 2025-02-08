@@ -1,5 +1,5 @@
 import {HomePage, ProductDetailsPage} from "./pages/pages";
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {Route, Routes} from "react-router-dom";
 
 function App() {
     return (
