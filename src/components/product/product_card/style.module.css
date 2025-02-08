@@ -7,6 +7,7 @@
     background-color: #fff !important;
     display: flex !important;
     flex-direction: column !important;
+    justify-content: space-between !important;
     align-items: center !important;
     text-align: center !important;
     min-width: 100% !important;
@@ -26,7 +27,8 @@
 .card-product-img {
     margin-top: 10px !important;
     margin-bottom: 10px !important;
-    max-width: 65% !important;
+    min-width: 130px !important;
+    max-height: 80px !important;
 }
 
 .card-props-box {
@@ -35,10 +37,11 @@
 
 .card-prop {
     font-family: sans-serif !important;
+    font-size: 0.8rem !important;
 }
 
 .card-delete-button {
-    margin-top: 10px !important;
     font-family: sans-serif !important;
     background: crimson !important;
+    margin-bottom: 10px !important;
 }

@@ -1,5 +1,5 @@
 import {configureStore, Tuple} from '@reduxjs/toolkit';
-import productsReducer from './productSlice.tsx';
+import productsReducer from './slices/productSlice.tsx';
 import logger from 'redux-logger';
 
 const store = configureStore({

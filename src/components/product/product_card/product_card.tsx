@@ -11,6 +11,7 @@ interface ProductCardProps {
         category?: string;
         quantity: number;
         unit: string;
+        price: number;
         image?: string | null;
     };
     onCardClick: () => void;
@@ -27,7 +28,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({product, onCardClick, o
                     </Typography>
 
                     <Box
-                        component="img" src={product.image ?? undefined}
+                        component="img"
+                        src={product.image ?? "https://pic.onlinewebfonts.com/svg/img_47726.svg"}
                         alt="product" className={styles['card-product-img']}
                     />
 
@@ -38,6 +40,10 @@ export const ProductCard: React.FC<ProductCardProps> = ({product, onCardClick, o
 
                         <Typography className={styles['card-prop']}>
                             Количество: {product.quantity} {product.unit}
+                        </Typography>
+
+                        <Typography className={styles['card-prop']}>
+                            Цена: {product.price}
                         </Typography>
                     </Box>
                 </Box>

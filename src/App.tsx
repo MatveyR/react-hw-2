@@ -1,10 +1,12 @@
-import {HomePage} from "./pages/pages";
+import {HomePage, ProductDetailsPage} from "./pages/pages";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 
 function App() {
     return (
-        <>
-            <HomePage />
-        </>
+        <Routes>
+            <Route path="/" element={<HomePage/>}/>
+            <Route path="/products/:id" element={<ProductDetailsPage/>}/>
+        </Routes>
     )
 }
 

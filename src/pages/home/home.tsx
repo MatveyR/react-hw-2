@@ -1,43 +1,54 @@
 import * as React from "react";
 import {useState} from "react";
-import {NavBar, ProductCard, ProductModal, Sidebar} from "../../components/components";
+import {NavBar, ProductAddNew, ProductCard, Sidebar} from "../../components/components";
 import styles from "./style.module.css";
 import {Product} from "../../data/models/Product.tsx";
-import {Box, Pagination} from "@mui/material";
+import {Box, Button, Pagination, Typography} from "@mui/material";
 import {useDispatch, useSelector} from "react-redux";
-import {removeProduct} from "../../data/redux/productSlice.tsx";
+import {removeProduct} from "../../data/store/slices/productSlice.tsx";
 import {RootState} from "@reduxjs/toolkit/query";
+import {useNavigate} from "react-router";
 
 export const HomePage: React.FC = () => {
-    const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
-    const handleProductClick = (product: Product) => {
-        setSelectedProduct(product);
-    };
-    const handleCloseModal = () => {
-        setSelectedProduct(null);
-    };
+    const navigate = useNavigate();
+
+    const [addNewProduct, setAddNewProduct] = useState<boolean>(false);
+    const handleAddNewProduct = (flag: boolean) => {
+        setAddNewProduct(flag);
+    }
+    const handleCloseAddNewProduct = () => {
+        setAddNewProduct(false);
+    }
 
     const [isSidebarClosed, setIsSidebarClosed] = useState(false);
     const handleSidebarToggle = () => {
         setIsSidebarClosed(!isSidebarClosed);
     }
 
-    const [currentPage, setCurrentPage] = useState(1);
-    const handlePageChange = (_event: React.ChangeEvent<unknown>, page: number) => {
-        setCurrentPage(page);
-    };
-
     const [filters, setFilters] = useState({textMask: '', category: '', nonZeroQ: false});
     const handleFilters = (filters: { textMask: string, category: string, nonZeroQ: boolean }) => {
-        setFilters(filters)
+        setFilters(filters);
+        setCurrentPage(1);
     };
 
-    const { products } = useSelector((state: RootState) => state.products);
+    const handleProductClick = (product_id: string) => {
+        navigate(`/products/${product_id}`)
+    }
+
+    const {products} = useSelector((state: RootState) => state.products);
     const dispatch = useDispatch();
     const handleRemoveProduct = (product_id: string) => {
         dispatch(removeProduct(product_id));
     };
 
+    const handleNavbarProductsClick = () => {
+        navigate("/");
+    }
+
+    const [currentPage, setCurrentPage] = useState(1);
+    const handlePageChange = (_event: React.ChangeEvent<unknown>, page: number) => {
+        setCurrentPage(page);
+    };
     const filtratedData = products.filter((product: { name: string; quantity: number; category: never; }) => {
         return (
             (filters.textMask === '' || product.name.toLowerCase().includes(filters.textMask)) &&
@@ -45,29 +56,55 @@ export const HomePage: React.FC = () => {
             (filters.category === '' || product.category === filters.category)
         )
     });
-    const paginatedData = filtratedData.slice((currentPage - 1) * 10, currentPage * 10);
+    const paginatedData = filtratedData.reverse().slice((currentPage - 1) * 10, currentPage * 10);
 
     return (
         <Box>
             <Sidebar isOpen={isSidebarClosed} onClose={handleSidebarToggle} onFiltrate={handleFilters}/>
-            <NavBar onSidebarToggle={handleSidebarToggle}/>
+            <NavBar
+                onSidebarToggle={handleSidebarToggle}
+                onNavbarProductsClick={handleNavbarProductsClick}
+                isHome={true}
+            />
 
-            <Box className={styles.productsGrid}>
-                {paginatedData.map((product: Product, index: number) => (
-                    <ProductCard
-                        key={index}
-                        product={product}
-                        onCardClick={() => handleProductClick(product)}
-                        onDeleteClick={() => handleRemoveProduct(product.id)}
-                    />
-                ))}
+            <Box className={styles['box-button']}>
+                <Button
+                    variant="contained"
+                    className={styles['add-new-button']}
+                    onClick={() => handleAddNewProduct(true)}
+                >
+                    + Добавить новый товар
+                </Button>
             </Box>
 
-            {selectedProduct && (
-                <ProductModal
-                    product={selectedProduct}
-                    onClose={handleCloseModal}
-                />
+            {filtratedData.length !== 0 ? (
+                <Box>
+                    <Box className={styles.productsGrid}>
+                        {paginatedData.map((product: Product, index: number) => (
+                            <ProductCard
+                                key={index}
+                                product={product}
+                                onCardClick={() => handleProductClick(product.id)}
+                                onDeleteClick={() => handleRemoveProduct(product.id)}
+                            />
+                        ))}
+                    </Box>
+
+                    <Pagination
+                        count={Math.ceil(filtratedData.length / 10)}
+                        page={currentPage}
+                        onChange={handlePageChange}
+                        sx={{display: 'flex', justifyContent: 'center'}}
+                    />
+                </Box>
+            ) : (
+                <Box sx={{display: "flex", justifyContent: "center", alignItems: "center", marginTop: "200px"}}>
+                    <Typography>Ничего не найдено!</Typography>
+                </Box>
+            )}
+
+            {addNewProduct && (
+                <ProductAddNew onClose={handleCloseAddNewProduct}/>
             )}
 
             {isSidebarClosed &&
@@ -76,13 +113,6 @@ export const HomePage: React.FC = () => {
                     onClick={handleSidebarToggle}
                 ></Box>
             }
-
-            <Pagination
-                count={Math.ceil(filtratedData.length / 10)}
-                page={currentPage}
-                onChange={handlePageChange}
-                sx={{display: 'flex', justifyContent: 'center'}}
-            />
         </Box>
     );
 };

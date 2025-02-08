@@ -1,30 +1,13 @@
 [
   {
-    "id": "0",
-    "name": "Стул",
-    "description": "Удобный стул для дома.",
-    "category": "Мебель",
-    "quantity": 15,
-    "unit": "шт",
-    "image": "https://anata-mebel.ru/image/cache/data/stul/ESF/dc-373/stul-dc373-yellow-supbig-577609-3444-1500x1000.jpg"
-  },
-  {
-    "id": "1",
-    "name": "Молоток",
-    "description": "Прочный молоток для строительства.",
-    "category": "Инструменты",
-    "quantity": 0,
-    "unit": "шт",
-    "image": "https://cdn1.ozone.ru/s3/multimedia-8/6674243480.jpg"
-  },
-  {
     "id": "2",
     "name": "Микроволновка",
     "description": "Компактная микроволновая печь.",
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "3",
@@ -33,7 +16,8 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "4",
@@ -42,7 +26,8 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "5",
@@ -51,7 +36,8 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "6",
@@ -60,7 +46,8 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "7",
@@ -69,7 +56,8 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "8",
@@ -78,7 +66,8 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "9",
@@ -87,7 +76,8 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "10",
@@ -96,7 +86,8 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "11",
@@ -105,7 +96,8 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "12",
@@ -114,7 +106,8 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "13",
@@ -123,7 +116,8 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "14",
@@ -132,7 +126,8 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "15",
@@ -141,7 +136,8 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "16",
@@ -150,7 +146,8 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "17",
@@ -159,7 +156,8 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "18",
@@ -168,7 +166,8 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "19",
@@ -177,7 +176,8 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "20",
@@ -186,7 +186,8 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "21",
@@ -195,7 +196,8 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "22",
@@ -204,7 +206,8 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "23",
@@ -213,7 +216,8 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "24",
@@ -222,7 +226,8 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "25",
@@ -231,7 +236,8 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "26",
@@ -240,7 +246,8 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "27",
@@ -249,7 +256,8 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "28",
@@ -258,7 +266,8 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "29",
@@ -267,7 +276,8 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "30",
@@ -276,7 +286,8 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "31",
@@ -285,7 +296,8 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "32",
@@ -294,7 +306,8 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "33",
@@ -303,7 +316,8 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "34",
@@ -312,7 +326,8 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "35",
@@ -321,7 +336,8 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "36",
@@ -330,7 +346,8 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "37",
@@ -339,7 +356,8 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "38",
@@ -348,7 +366,8 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "39",
@@ -357,7 +376,8 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "40",
@@ -366,7 +386,8 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "41",
@@ -375,7 +396,8 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "42",
@@ -384,7 +406,8 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "43",
@@ -393,7 +416,8 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "44",
@@ -402,7 +426,8 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "45",
@@ -411,7 +436,8 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "46",
@@ -420,7 +446,8 @@
     "category": "Бытовая техника",
     "quantity": 1,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "47",
@@ -429,7 +456,8 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "48",
@@ -438,7 +466,8 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "49",
@@ -447,7 +476,8 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "50",
@@ -456,7 +486,8 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "51",
@@ -465,7 +496,8 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "52",
@@ -474,7 +506,8 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "53",
@@ -483,7 +516,8 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "54",
@@ -492,7 +526,8 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "55",
@@ -501,7 +536,8 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "56",
@@ -510,7 +546,8 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "57",
@@ -519,7 +556,8 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
   },
   {
     "id": "58",
@@ -528,6 +566,27 @@
     "category": "Бытовая техника",
     "quantity": 5,
     "unit": "шт",
-    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg"
+    "image": "https://cdn1.ozone.ru/multimedia/1033924307.jpg",
+    "price": 100
+  },
+  {
+    "id": "0",
+    "name": "Стул",
+    "description": "Удобный стул для дома.",
+    "category": "Мебель",
+    "quantity": 15,
+    "unit": "шт",
+    "image": "https://anata-mebel.ru/image/cache/data/stul/ESF/dc-373/stul-dc373-yellow-supbig-577609-3444-1500x1000.jpg",
+    "price": 100
+  },
+  {
+    "id": "1",
+    "name": "Молоток",
+    "description": "Прочный молоток для строительства.",
+    "category": "Инструменты",
+    "quantity": 0,
+    "unit": "шт",
+    "image": "https://cdn1.ozone.ru/s3/multimedia-8/6674243480.jpg",
+    "price": 100
   }
 ]
