@@ -1,36 +1,59 @@
-.modalOverlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
+.modal {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
 }
 
-.modalContent {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    width: 80%;
-    max-width: 500px;
-    position: relative;
-    text-align: center;
+.modal-overlay {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    z-index: 999 !important;
 }
 
-.modalContent button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.modal-content {
+    background-color: white !important;
+    padding: 20px !important;
+    border-radius: 8px !important;
+    width: 80% !important;
+    max-width: 500px !important;
+    position: relative !important;
+    text-align: center !important;
 }
 
-.modalContent button:hover {
-    background-color: #0056b3;
+.modal-content button {
+    margin-top: 20px !important;
+    padding: 10px 20px !important;
+    background-color: #007bff !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 5px !important;
+    cursor: pointer !important;
+}
+
+.modal-content button:hover {
+    background-color: #0056b3 !important;
+}
+
+.modal-product-name {
+    font-family: sans-serif !important;
+    margin-bottom: 10px !important;
+    font-weight: bold !important;
+    font-size: 1.2rem !important;
+}
+
+.modal-product-img {
+    height: auto !important;
+    width: 100% !important;
+    margin-bottom: 10px !important;
+}
+
+.modal-product-prop {
+    font-family: sans-serif !important;
 }

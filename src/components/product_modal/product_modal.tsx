@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./style.module.css";
-import {Modal, Button, Typography} from '@mui/material';
+import {Modal, Button, Typography, Box} from '@mui/material';
 
 interface ProductModalProps {
     product: {
@@ -18,36 +18,42 @@ export const ProductModal: React.FC<ProductModalProps> = ({product, onClose}) =>
     // Dialog имеет гораздо больше фишек для настройки визуала и анимаций, Modal в противовес более базовый
     // В данном случае мне достаточно функционала Modal, поэтому использую его
     return (
-        <>
-            <Modal open={true} onClose={onClose} sx={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center"
-            }}>
-                <div className={styles.modalContent}>
-                    <Typography sx={{
-                        fontFamily: "sans-serif",
-                        fontSize: "1.2rem",
-                        fontWeight: "Bold",
-                        marginBottom: "10px"
-                    }}>{product.name}</Typography>
+        <Box>
+            <Modal open={true} onClose={onClose} className={styles['modal']}>
+                <Box className={styles['modal-content']}>
+                    <Typography className={styles['modal-product-name']}>
+                        {product.name}
+                    </Typography>
+
                     {product.image ? (
-                        <img src={product.image} alt={product.name}
-                             style={{width: '100%', height: 'auto', marginBottom: "10px"}}/>
+                        <Box
+                            component="img"
+                            src={product.image}
+                            alt={product.name}
+                            className={styles['modal-product-img']}
+                        />
                     ) : (
-                        <div>Картинка отсутствует</div>
+                        <Typography>
+                            Картинка отсутствует
+                        </Typography>
                     )}
+
                     <Typography sx={{fontFamily: "sans-serif"}}>{product.description}</Typography>
-                    <Typography
-                        sx={{fontFamily: "sans-serif"}}>Категория: {product.category || 'Не указано'}</Typography>
-                    <Typography
-                        sx={{fontFamily: "sans-serif"}}>Количество: {product.quantity} {product.unit}</Typography>
+
+                    <Typography className={styles['modal-product-prop']}>
+                        Категория: {product.category || 'Не указано'}
+                    </Typography>
+
+                    <Typography className={styles['modal-product-prop']}>
+                        Количество: {product.quantity} {product.unit}
+                    </Typography>
+
                     <Button onClick={onClose} variant="outlined">
                         Закрыть
                     </Button>
-                </div>
+                </Box>
             </Modal>
-        </>
+        </Box>
     );
 };
 

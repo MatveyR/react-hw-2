@@ -1,96 +1,120 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import styles from "./style.module.css";
-import {Button} from "@mui/material";
+import {
+    Box,
+    Button,
+    Checkbox,
+    FormControl,
+    List,
+    ListItem,
+    MenuItem,
+    Select,
+    TextField,
+    Typography,
+} from "@mui/material";
 
 interface SidebarProps {
     isOpen: boolean;
     onClose: () => void;
-    onFiltrate: (filter: { textMask: string, category: string, nonZeroQ: boolean }) => void;
+    onFiltrate: (filter: { textMask: string; category: string; nonZeroQ: boolean }) => void;
 }
 
-export const Sidebar: React.FC<SidebarProps> = ({isOpen, onFiltrate}) => {
-
-    const [textMask, setSearchText] = useState('');
-    const [category, setCategory] = useState('');
+export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onFiltrate }) => {
+    const [textMask, setSearchText] = useState("");
+    const [category, setCategory] = useState("");
     const [nonZeroQ, setNonZeroQ] = useState(false);
 
     const handleSetFilters = () => {
-        onFiltrate({textMask, category, nonZeroQ});
+        onFiltrate({ textMask, category, nonZeroQ });
     };
 
     const handleResetFilters = () => {
-        setSearchText('');
-        setCategory('');
+        setSearchText("");
+        setCategory("");
         setNonZeroQ(false);
-        onFiltrate({textMask, category, nonZeroQ});
-    }
+        onFiltrate({ textMask: "", category: "", nonZeroQ: false });
+    };
 
     return (
-        <div className={`${styles.sidebar} ${isOpen ? styles.active : ""}`}>
-            <div className={styles["sidebar-label"]}>Поиск</div>
-            <ul className={styles["sidebar-list"]}>
-                <li className={styles["sidebar-item"]}>
-                    <input
-                        type="text"
+        <Box className={`${styles.sidebar} ${isOpen ? styles.active : ""}`}>
+            <Typography className={styles["sidebar-label"]}>Поиск</Typography>
+
+            <List className={styles["sidebar-list"]}>
+                <ListItem className={styles["sidebar-item"]}>
+                    <TextField
                         className={styles["sidebar-input"]}
+                        size="small"
+                        fullWidth
+                        variant="outlined"
                         placeholder="Начните вводить..."
+                        value={textMask || ""}
                         onChange={(e) => setSearchText(e.target.value.toLowerCase().trim())}
                     />
-                </li>
-            </ul>
-            <div className={styles["sidebar-label"]}>Фильтры</div>
-            <ul className={styles["sidebar-list"]}>
-                <li className={styles["sidebar-item"]}>
-                    <ul className={styles["sidebar-option"]}>
-                        <li className={styles["sidebar-option-item"]}>
-                            Категория
-                        </li>
-                        <li className={styles["sidebar-option-item"]}>
-                            <select className={styles["sidebar-select"]} onChange={(e) => setCategory(e.target.value)}>
-                                <option value="Любое">Любое</option>
-                                <option value="Мебель">Мебель</option>
-                                <option value="Инструменты">Инструменты</option>
-                                <option value="Бытовая техника">Бытовая техника</option>
-                            </select>
-                        </li>
-                    </ul>
-                </li>
-                <li className={styles["sidebar-item"]}>
-                    <ul className={styles["sidebar-option"]}>
-                        <li className={styles["sidebar-option-item"]}>
+                </ListItem>
+            </List>
+
+            <Typography className={styles["sidebar-label"]}>Фильтры</Typography>
+
+            <List className={styles["sidebar-list"]}>
+                <ListItem className={styles["sidebar-item"]}>
+                    <Box className={styles["sidebar-option"]}>
+                        <Typography className={styles["sidebar-option-label"]}>Категория</Typography>
+                        <FormControl fullWidth variant="outlined" className={styles["sidebar-select-container"]}>
+                            <Select
+                                variant="standard"
+                                size="small"
+                                className={styles["sidebar-select"]}
+                                value={category || "Любое"}
+                                onChange={(e) => {
+                                    if (e.target.value === "Любое") {
+                                        setCategory("");
+                                    } else {
+                                        setCategory(e.target.value);
+                                    }
+                                }}
+                            >
+                                <MenuItem value="Любое">Любое</MenuItem>
+                                <MenuItem value="Мебель">Мебель</MenuItem>
+                                <MenuItem value="Инструменты">Инструменты</MenuItem>
+                                <MenuItem value="Бытовая техника">Бытовая техника</MenuItem>
+                            </Select>
+                        </FormControl>
+                    </Box>
+                </ListItem>
+
+                <ListItem className={styles["sidebar-item"]}>
+                    <Box className={styles["sidebar-option"]}>
+                        <Typography className={styles["sidebar-option-label"]}>
                             Только то, что есть в наличии на складах
-                        </li>
-                        <li className={styles["sidebar-option-item"]}>
-                            <input type="checkbox" onChange={(e) => setNonZeroQ(e.target.checked)}/>
-                        </li>
-                    </ul>
-                </li>
-                <li>
+                        </Typography>
+                        <Checkbox
+                            className={styles["sidebar-checkbox"]}
+                            checked={nonZeroQ || false}
+                            onChange={(e) => setNonZeroQ(e.target.checked)}
+                        />
+                    </Box>
+                </ListItem>
+
+                <ListItem className={styles["sidebar-button-container"]}>
                     <Button
                         variant="contained"
-                        sx={{
-                            justifyContent: "flex-end",
-                            marginBottom: "15px",
-                            background: '#1b222c'
-                        }}
-                        onClick={() => handleSetFilters()}
+                        className={styles["sidebar-button"]}
+                        onClick={handleSetFilters}
                     >
                         Применить фильтры
                     </Button>
-                </li>
-                <li>
+                </ListItem>
+
+                <ListItem className={styles["sidebar-button-container"]}>
                     <Button
                         variant="contained"
-                        sx={{
-                            justifyContent: "flex-end",
-                            background: '#1b222c'
-                        }}
-                        onClick={() => handleResetFilters()}
+                        className={styles["sidebar-button"]}
+                        onClick={handleResetFilters}
                     >
-                        Cбросить фильтры
+                        Сбросить фильтры
                     </Button>
-                </li>
-            </ul>
-        </div>
+                </ListItem>
+            </List>
+        </Box>
     );
 };
