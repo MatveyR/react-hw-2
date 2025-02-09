@@ -8,7 +8,7 @@ interface ProductCardProps {
         id: string
         name: string;
         description?: string;
-        category?: string;
+        category: string;
         quantity: number;
         unit: string;
         price: number;
@@ -35,7 +35,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({product, onCardClick, o
 
                     <Box className={styles['props-box']}>
                         <Typography className={styles['card-prop']}>
-                            Категория: {product.category || "Не указано"}
+                            Категория: {product.category}
                         </Typography>
 
                         <Typography className={styles['card-prop']}>
@@ -43,7 +43,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({product, onCardClick, o
                         </Typography>
 
                         <Typography className={styles['card-prop']}>
-                            Цена: {product.price}
+                            Цена: {product.price} р.
                         </Typography>
                     </Box>
                 </Box>

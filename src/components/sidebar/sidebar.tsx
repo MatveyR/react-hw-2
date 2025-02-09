@@ -12,6 +12,8 @@ import {
     TextField,
     Typography,
 } from "@mui/material";
+import {useSelector} from "react-redux";
+import {RootState} from "../../data/store/store.tsx";
 
 interface SidebarProps {
     isOpen: boolean;
@@ -20,6 +22,8 @@ interface SidebarProps {
 }
 
 export const Sidebar: React.FC<SidebarProps> = ({isOpen, onFiltrate}) => {
+    const categories = useSelector((state: RootState) => state.categories.categories);
+
     const [textMask, setSearchText] = useState("");
     const [category, setCategory] = useState("");
     const [nonZeroQ, setNonZeroQ] = useState(false);
@@ -73,10 +77,9 @@ export const Sidebar: React.FC<SidebarProps> = ({isOpen, onFiltrate}) => {
                                     }
                                 }}
                             >
-                                <MenuItem value="Любое">Любое</MenuItem>
-                                <MenuItem value="Мебель">Мебель</MenuItem>
-                                <MenuItem value="Инструменты">Инструменты</MenuItem>
-                                <MenuItem value="Бытовая техника">Бытовая техника</MenuItem>
+                                {categories.map((category) =>
+                                    <MenuItem value={category.name}>{category.name}</MenuItem>
+                                )}
                             </Select>
                         </FormControl>
                     </Box>

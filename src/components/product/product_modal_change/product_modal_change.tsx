@@ -3,22 +3,25 @@ import styles from "./style.module.css";
 import {Box, Button, MenuItem, Modal, Select, TextField, Typography} from '@mui/material';
 import {useDispatch, useSelector} from "react-redux";
 import {RootState} from "../../../data/store/store.tsx";
-import {addProduct} from "../../../data/store/slices/productSlice.tsx";
+import {addProduct, updateProduct} from "../../../data/store/slices/productSlice.tsx";
+import {Product} from "../../../data/models/Product.tsx";
 
-interface ProductAddNewProps {
+interface ProductModalChangeProps {
     onClose: () => void;
+    product: Product | null;
 }
 
-export const ProductAddNew: React.FC<ProductAddNewProps> = ({onClose}) => {
+export const ProductModalChange: React.FC<ProductModalChangeProps> = ({onClose, product}) => {
     const dispatch = useDispatch();
-    const products = useSelector((state: RootState)=> state.products.products)
+    const categories = useSelector((state: RootState) => state.categories.categories);
 
-    const [productName, setProductName] = useState("");
-    const [productCategory, setProductCategory] = useState("");
-    const [productDescription, setProductDescription] = useState("");
-    const [productQuantity, setProductQuantity] = useState(-1);
-    const [productPrice, setProductPrice] = useState(-1);
-    const [productImage, setProductImage] = useState<string | null>(null);
+    const [productName, setProductName] = useState(product ? product.name : "");
+    const [productCategory, setProductCategory] = useState(product ? product.category : "");
+    const [productDescription, setProductDescription] = useState(product ? product.description : "");
+    const [productQuantity, setProductQuantity] = useState(product ? product.quantity : null);
+    const [productPrice, setProductPrice] = useState(product ? product.price : null);
+    const [productImage, setProductImage] = useState<string | null>(product ? (product.image ? product.image : null) : null);
+    const [productUnit, setProductUnit] = useState(product ? product.unit : "шт");
 
     const [nameError, setNameError] = useState<string | null>(null);
     const [descError, setDescError] = useState<string | null>(null);
@@ -34,44 +37,68 @@ export const ProductAddNew: React.FC<ProductAddNewProps> = ({onClose}) => {
         setPriceError(null);
     };
 
-    const handleSaveProduct = (name: string, desc: string, cat: string, quan: number, price: number) => {
+    const handleSaveProduct = () => {
         resetErrors();
         let errorFlag = false;
-        if (name === "") {
+        if (productName === "") {
             setNameError("Обязательное поле");
             errorFlag = true;
         }
-        if (desc === "") {
+        if (!productDescription || productDescription === "") {
             setDescError("Обязательное поле");
             errorFlag = true;
         }
-        if (cat === "") {
+        if (!productCategory || productCategory === "") {
             setCatError("Обязательное поле");
             errorFlag = true;
         }
-        if (quan === -1 || isNaN(quan)) {
+        if (productQuantity === null || isNaN(productQuantity)) {
             setQuanError("Обязательное поле");
             errorFlag = true;
         }
-        if (price === -1 || isNaN(price)) {
+        if (productPrice === null || isNaN(productPrice)) {
             setPriceError("Обязательное поле");
             errorFlag = true;
         }
         if (errorFlag) {
             return;
         }
-        dispatch(
-          addProduct({
-              id: String(products.length + 1),
-              name: productName,
-              description: productDescription,
-              category: productCategory,
-              quantity: productQuantity,
-              price: productPrice,
-              unit: "шт.",
-              image: productImage
-          })
-        );
+
+        const category = categories.find((category) => category.name === productCategory);
+        let category_id = "0";
+        if (category) {
+            category_id = category.id;
+        }
+
+        if (!product) {
+            dispatch(
+                addProduct({
+                    id: Date.now().toString(),
+                    name: productName,
+                    description: productDescription,
+                    category: productCategory,
+                    category_id: category_id,
+                    quantity: productQuantity!,
+                    price: productPrice!,
+                    unit: productUnit,
+                    image: productImage
+                })
+            );
+        } else {
+            dispatch(
+                updateProduct({
+                    id: product.id,
+                    name: productName,
+                    description: productDescription,
+                    category: productCategory,
+                    category_id: category_id,
+                    quantity: productQuantity!,
+                    price: productPrice!,
+                    unit: productUnit,
+                    image: productImage
+                })
+            )
+        }
         onClose();
     };
 
@@ -79,7 +106,7 @@ export const ProductAddNew: React.FC<ProductAddNewProps> = ({onClose}) => {
         <Modal open={true} onClose={onClose} className={styles['modal']}>
             <Box className={styles['modal-content']}>
                 <Typography className={styles['modal-label']}>
-                    Добавление нового товара
+                    {product ? "Изменение товара" : "Добавление нового товара"}
                 </Typography>
 
                 <Box className={styles['modal-form']}>
@@ -91,6 +118,7 @@ export const ProductAddNew: React.FC<ProductAddNewProps> = ({onClose}) => {
                             size="small"
                             error={!!nameError}
                             helperText={nameError}
+                            value={productName}
                             onChange={(e) => {
                                 setProductName(e.target.value)
                             }}
@@ -105,6 +133,7 @@ export const ProductAddNew: React.FC<ProductAddNewProps> = ({onClose}) => {
                             size="small"
                             error={!!descError}
                             helperText={descError}
+                            value={productDescription}
                             onChange={(e) => {
                                 setProductDescription(e.target.value)
                             }}
@@ -126,10 +155,9 @@ export const ProductAddNew: React.FC<ProductAddNewProps> = ({onClose}) => {
                                 }
                             }
                         >
-                            <MenuItem value="Любое">Любое</MenuItem>
-                            <MenuItem value="Мебель">Мебель</MenuItem>
-                            <MenuItem value="Инструменты">Инструменты</MenuItem>
-                            <MenuItem value="Бытовая техника">Бытовая техника</MenuItem>
+                            {categories.map((category) =>
+                                <MenuItem value={category.name}>{category.name}</MenuItem>
+                            )}
                         </Select>
                     </Box>
 
@@ -141,10 +169,31 @@ export const ProductAddNew: React.FC<ProductAddNewProps> = ({onClose}) => {
                             size="small"
                             error={!!quanError}
                             helperText={quanError}
+                            value={productQuantity}
                             onChange={(e) => {
                                 setProductQuantity(Number(e.target.value))
                             }}
                         />
+                    </Box>
+
+                    <Box className={styles['modal-form-option']}>
+                        <Typography>
+                            Ед. измерения:
+                        </Typography>
+                        <Select
+                            size="small"
+                            variant="outlined"
+                            value={productUnit || "шт"}
+                            onChange={
+                                (e) => {
+                                    setProductUnit(e.target.value)
+                                }
+                            }
+                        >
+                            <MenuItem value="шт">шт</MenuItem>
+                            <MenuItem value="кг">кг</MenuItem>
+                            <MenuItem value="л">л</MenuItem>
+                        </Select>
                     </Box>
 
                     <Box className={styles['modal-form-option']}>
@@ -155,6 +204,7 @@ export const ProductAddNew: React.FC<ProductAddNewProps> = ({onClose}) => {
                             size="small"
                             error={!!priceError}
                             helperText={priceError}
+                            value={productPrice}
                             onChange={(e) => {
                                 setProductPrice(Number(e.target.value))
                             }}
@@ -167,6 +217,7 @@ export const ProductAddNew: React.FC<ProductAddNewProps> = ({onClose}) => {
                         </Typography>
                         <TextField
                             size="small"
+                            value={productImage}
                             onChange={(e) => {
                                 setProductImage(e.target.value)
                             }}
@@ -177,7 +228,7 @@ export const ProductAddNew: React.FC<ProductAddNewProps> = ({onClose}) => {
                     <Button
                         className={styles['modal-save-button']}
                         variant="contained"
-                        onClick={() => handleSaveProduct(productName, productDescription, productCategory, productQuantity, productPrice)}
+                        onClick={() => handleSaveProduct()}
                     >
                         Сохранить
                     </Button>

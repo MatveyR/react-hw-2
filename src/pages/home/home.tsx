@@ -1,12 +1,12 @@
 import * as React from "react";
 import {useState} from "react";
-import {NavBar, ProductAddNew, ProductCard, Sidebar} from "../../components/components";
+import {NavBar, ProductModalChange, ProductCard, Sidebar} from "../../components/components";
 import styles from "./style.module.css";
 import {Product} from "../../data/models/Product.tsx";
 import {Box, Button, Pagination, Typography} from "@mui/material";
 import {useDispatch, useSelector} from "react-redux";
 import {removeProduct} from "../../data/store/slices/productSlice.tsx";
-import {RootState} from "@reduxjs/toolkit/query";
+import {RootState} from "../../data/store/store.tsx";
 import {useNavigate} from "react-router";
 
 export const HomePage: React.FC = () => {
@@ -35,23 +35,17 @@ export const HomePage: React.FC = () => {
         navigate(`/products/${product_id}`)
     }
 
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
     const {products} = useSelector((state: RootState) => state.products);
     const dispatch = useDispatch();
     const handleRemoveProduct = (product_id: string) => {
         dispatch(removeProduct(product_id));
     };
 
-    const handleNavbarProductsClick = () => {
-        navigate("/");
-    }
-
     const [currentPage, setCurrentPage] = useState(1);
     const handlePageChange = (_event: React.ChangeEvent<unknown>, page: number) => {
         setCurrentPage(page);
     };
-    const filtratedData = products.filter((product: { name: string; quantity: number; category: never; }) => {
+    const filtratedData = products.filter((product) => {
         return (
             (filters.textMask === '' || product.name.toLowerCase().includes(filters.textMask)) &&
             (!filters.nonZeroQ || product.quantity > 0) &&
@@ -65,7 +59,6 @@ export const HomePage: React.FC = () => {
             <Sidebar isOpen={isSidebarClosed} onClose={handleSidebarToggle} onFiltrate={handleFilters}/>
             <NavBar
                 onSidebarToggle={handleSidebarToggle}
-                onNavbarProductsClick={handleNavbarProductsClick}
                 isHome={true}
             />
 
@@ -106,7 +99,7 @@ export const HomePage: React.FC = () => {
             )}
 
             {addNewProduct && (
-                <ProductAddNew onClose={handleCloseAddNewProduct}/>
+                <ProductModalChange onClose={handleCloseAddNewProduct} product={null}/>
             )}
 
             {isSidebarClosed &&

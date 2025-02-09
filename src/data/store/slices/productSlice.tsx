@@ -1,13 +1,14 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {Product} from '../../models/Product.tsx';
-import productsData from '../../products.json';
+import productsData from '../../databases/products.json';
+import {removeCategory, updateCategory} from "./categorySlice.tsx";
 
 interface ProductsState {
     products: Product[];
 }
 
 const initialState: ProductsState = {
-    products: productsData,
+    products: productsData
 };
 
 const productsSlice = createSlice({
@@ -19,9 +20,35 @@ const productsSlice = createSlice({
         },
         addProduct(state, action: PayloadAction<Product>) {
             state.products.push(action.payload)
+        },
+        updateProduct(state, action: PayloadAction<Product>) {
+            const id = state.products.findIndex(product => product.id === action.payload.id);
+            if (id !== -1) {
+                state.products[id] = action.payload;
+            }
         }
+    },
+    extraReducers: (builder) => {
+        builder.addCase(updateCategory, (state, action) => {
+            const updatedCategory = action.payload;
+            state.products.forEach((product) => {
+                if (product.category_id === updatedCategory.id) {
+                    product.category = updatedCategory.name;
+                }
+            });
+        });
+
+        builder.addCase(removeCategory, (state, action) => {
+            const deletedCategoryId = action.payload;
+            state.products.forEach((product) => {
+                if (product.category_id === deletedCategoryId) {
+                    product.category = "Любое";
+                    product.category_id = "0";
+                }
+            });
+        });
     },
 });
 
-export const {removeProduct, addProduct} = productsSlice.actions;
+export const {removeProduct, addProduct, updateProduct} = productsSlice.actions;
 export default productsSlice.reducer;
